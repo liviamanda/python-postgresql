@@ -1,19 +1,35 @@
 ## Drug Performance Evaluation Project
 
-## Assignment Problems
+### Overview
 
-Kamu adalah seorang Data Analyst yang akan mengerjakan projek besar untuk menyelesaikan suatu permasalahan client dan client kamu butuh sekali hasil analisa datamu menggunakan statistik dan dashboard visualisasi data untuk membantu mereka menyelesaikan masalah.
+The goal of this project is to evaluate drug performance using statistical analysis and data visualization. The client requires detailed analysis and insights to address their problem effectively.
 
 ---
 
-# Assignment Instructions
-## General Instructions
-1. Make SMART problem statement
-2. Penjabaran masalah dengan metode 5W+1H
-4. Setelah melakukan identifikasi dan penjabaran masalah, tentukan metrik/data apa saja yang diperlukan lalu tarik data yang diperlukan dari dataset yang sudah ditentukan menggunakan SQL. `Cantumkan semua query yang dibuat untuk menarik semua data yang diperlukan dalam milestone ini`.
-5. **Perlu diperhatikan** bahwa penjabaran masalah untuk dijawab menggunakan data visualisasi dan analisis statistik **HARUS** mengikuti kriteria berikut:
-  - Minimal terdapat `6 penjabaran` masalah dimana 4 penjabaran untuk `visualisasi data`, 1 penjabaran untuk `statistik deskriptif`, dan 1 penjabaran untuk `statistik inferensial`.
-6. Untuk `Data Visualisasi` dibebaskan menggunakan tipe visualisasi (batang, garis, dsb) dan library (matplotlib, pyplot, seaborn, dsb) apapun, disesuaikan dengan penjabaran masalahnya. `Minimal 4 visualisasi sesuai dengan jumlah minimum penjabaran untuk bagian visualisasi data`. **WAJIB** memberikan insight di tiap visualisasi data.
-7. Untuk `Statistik Deskriptif`, pilih minimal salah satu perhitungan/analisis statistik deskriptif seperti *central tendency*, *measure of variance*, *outlier analysis*, *distribution*, dsb. `Sesuaikan dengan penjabaran masalah yang ditentukan`.
-8. Untuk `Statistik Inferensial`, pilih minimal salah satu perhitungan/analisis statistik inferensial seperti *confidence interval*, *statistical significance*, *statistical testing*, *hypothesis testing: one sample, two sample independent, paired test, ANOVA, chi-square*, dsb. `Sesuaikan dengan penjabaran masalah yang ditentukan`.
-9. Output dari project ini adalah dashboard data visualisasi menggunakan `Tableau Public` dan analisis serta pengolahan data di `jupyter notebook`.
+### Assignment Instructions
+
+1. **Create a SMART Problem Statement**
+   - Define a clear and specific problem statement that is Specific, Measurable, Achievable, Relevant, and Time-bound (SMART).
+
+2. **Problem Elaboration using 5W+1H**
+   - What is the minimum number of reviews required to consider data as significant?
+   - Which disease occurs most frequently?
+   - What are the 5 most effective drugs for the most frequent disease?
+   - What are the prices of the top 5 effective drugs? How much is the drug with the lowest price?
+   - How is the distribution of different drug forms (e.g., tablets, capsules, liquids) based on its ease of use rating?
+   - How does the ease of use rating correlate with its satisfaction levels? Is there a trend where higher ease of use leads to higher satisfaction levels?
+   - Which drugs gain higher satisfaction levels: prescription (RX) or over-the-counter (OTC)?
+   - How do the top 5 drugs perform in terms of effectiveness, ease of use, and satisfaction levels?
+
+3. **Identify and Extract Necessary Data**
+   - Determine the metrics/data required.
+   - Extract the necessary data from the specified dataset using SQL.
+
+4. **Ensure Problem Elaboration for Data Visualization and Statistical Analysis Meets the Following Criteria:**
+   - Create `6 elaborations` where 4 are for `data visualization`, 1 for `descriptive statistics`, and 1 for `inferential statistics`.
+
+8. **Project Output**
+   - Create a data visualization dashboard using `Tableau Public`.
+   - Conduct analysis and data processing in a `jupyter notebook`.
+
+This README outlines the project goals, instructions, and tasks to provide a comprehensive evaluation of drug performance. The aim is to extract, prepare, analyze, and visualize data to generate actionable insights for the client.
