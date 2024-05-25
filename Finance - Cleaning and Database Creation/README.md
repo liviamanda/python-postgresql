@@ -1,6 +1,6 @@
-# Finance Project
+## Finance Project
 
-## Objective
+### Objective
 
 This project aims to evaluate the concepts of Relational Databases and Pandas as follows:
 
@@ -12,7 +12,7 @@ This project aims to evaluate the concepts of Relational Databases and Pandas as
 - Ability to preprocess data with Pandas before transferring to the SQL database
 - Ability to retrieve data from the created database (DQL)
 
-## Assignment Instructions and Cases
+### Assignment Instructions and Cases
 
 As a Data Engineer, the task is to assist the Finance division in organizing their data by creating a database on a PostgreSQL server.
 
