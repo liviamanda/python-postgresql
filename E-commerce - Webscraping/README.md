@@ -12,6 +12,8 @@ This project aims to evaluate the concepts of Web Scraping, Business Knowledge, 
 - Ability to derive insights and information from calculations
 - Ability to draw conclusions that address the problem statement
 
+---
+
 ### Assignment Instructions and Cases
 
 #### Case
