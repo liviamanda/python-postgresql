@@ -1,148 +1,60 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xOhv878p)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14503064&assignment_repo_type=AssignmentRepo)
-# Graded Challenge 3
+## E-commerce Project
 
-_Graded Challenge ini dibuat guna mengevaluasi pembelajaran pada Hacktiv8 Data Science Fulltime Program khususnya pada konsep Web Scraping, Business Knowledge dan Practical Statistics._
+### Assignment Objectives
 
----
+This project aims to evaluate the concepts of Web Scraping, Business Knowledge, and Practical Statistics as follows:
 
-## Assignment Instructions
+- Ability to extract data from internet sources using Web Scraping
+- Ability to perform data preparation before further analysis
+- Ability to build a problem statement using the SMART framework as part of business understanding
+- Ability to perform descriptive statistical calculations
+- Ability to conduct statistical testing and formulate hypotheses
+- Ability to derive insights and information from calculations
+- Ability to draw conclusions that address the problem statement
 
-*Graded Challenge 3* dikerjakan dalam format ***Notebook (.ipynb)**  di bawah ini:
-
-1. *Project* dinyatakan selesai dan diterima untuk dinilai jika notebook dapat dirun seluruhnya tanpa ada error (code block web scraping tidak perlu dirun ulang).
-
-2. Pada tugas Graded Challenge 3, akan diminta untuk membuat:
-  -  **Notebook (.ipynb)** yang berisikan pengambilan, pengolahan, dan analisis data. Kerjakan dengan Visual Studio Code!
-
-3. Notebook **wajib** diberikan keterangan atau pengenalan dengan menggunakan `comment` atau `docstring` yang berisikan Judul tugas, Nama, Batch, dan penjelasan singkat tentang program yang dibuat, fitur-fitur. Contoh:
-    ```py
-    '''
-    =================================================
-    Graded Challenge 2
-
-    Nama  : Fahmi Iman Alfarizki
-    Batch : BSD-50
-
-    Program ini dibuat untuk melakukan automatisasi pengolahan (cleaning) data text yang berguna untuk pemodelan model analisa sentimen.
-    =================================================
-    '''
-    ```
-5. Tiap cell diberikan penjelasan mengenai apa yang dilakukan/dijalankan dengan markdown.
-
-6. **WARNING**: Plagiarisme sekecil apapun dapat terdeteksi. Tugas ini akan diuji tingkat plagiarismenya dengan software khusus.
-
----
-
-## Assignment Submission
-
-- Simpan assignment pada Graded Challenge 3 ini dengan nama `P0G3_<nama-student>.ipynb` (notebook). Misal `P0G3_fahmi-iman.ipynb`(**Maksimal nama dua suku kata**).
-- Push file Assigment yang telah dibuat ke repository Github Classroom masing-masing student.
-
----
-
-## Assignment Objectives
-
-*Graded Challenge 3* ini dibuat guna mengevaluasi konsep Web Scraping, Business Knowledge dan Practical Statistics sebagai berikut:
-
-- Mampu mengambil data dari sumber internet dengan Web Scraping
-- Mampu melakukan data preparation sebelum analisis selanjutnya
-- Mampu membangun problem statement dengan framework SMART sebagai salah satu langkah business understanding
-- Mampu melakukan perhitungan statistik deskriptif
-- Mampu melakukan pengujian statistik dan merumuskan hipotesis
-- Mampu mengambil insight/informasi dari hasil perhitungan
-- Mampu mengambil kesimpulan yang menjawab problem statement
-
----
-
-## Assignment Instructions and Cases
+### Assignment Instructions and Cases
 
 #### Case
-Kamu ingin menambah pendapatanmu dengan berjualan. Namun, kamu tidak punya cukup modal untuk produksi barang dan hanya cukup untuk promosi, sehingga kamu memutuskan untuk menjalanan skema dropship di platform Tokopedia.
+The goal is to increase income through sales without enough capital for production, relying only on promotional funds. Thus, the decision is made to pursue a dropshipping model on Tokopedia.
 
-Kamu masih bingung akan berjualan apa dan teringat bahwa saat ini sedang viral seblak. Namun, kamu tidak yakin apakah benar bahwa masyarakat memiliki animo yang besar terhadap seblak.
+There is uncertainty about what product to sell, but seblak (a popular Indonesian snack) comes to mind due to its current trendiness. However, there is doubt about whether there is significant consumer interest in seblak.
 
-Karena kamu lulusan bootcamp Data Science Hacktiv8, dengan kemampuan dan pengetahuan kamu, kamu ingin menganalisis bagaimana penjualan produk seblak di Tokopedia. Apakah orang suka, apakah banyak yang beli, dsb.
+As a Data Scienties, the object is to analyze seblak product sales on Tokopedia to determine consumer interest and purchasing behavior.
 
-Tantangannya, kamu tidak punya data sama sekali selain yang terpampang pada website e-commerce Tokopedia. Oleh karena itu, perjalanan kamu dimulai dari pengambilan data menggunakan Web Scraping!
+The challenge is that no existing data is available apart from what is visible on the Tokopedia website. Hence, the journey begins with data extraction using Web Scraping.
 
 #### A. Web Scraping
-1. Lakukan pengambilan data dari halaman pencarian kata kunci produk "seblak". Kamu bisa langsung akses link ini:
-  https://www.tokopedia.com/search?navsource=&page=1&q=seblak&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&st=
-  
-  Berikut tampilan halaman link di atas:
-  ![img](https://github.com/FTDS-learning-materials/phase-0/blob/main/img/p0gc3_1.png?raw=true)
+1. Extract data from the search results for the keyword "seblak" on Tokopedia:
+   https://www.tokopedia.com/search?navsource=&page=1&q=seblak&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&st=
+2. Collect data on `Product Name`, `Product Price`, `Seller`, `Store Location`, `Number of Sales`, and `Product Rating`.
+3. Tokopedia features promotional schemes where the top panel displays products from merchants who pay for advertisements. Only collect data from regular product boxes with the element `<div class="css-974ipl">`.
 
-2. Ambil data `Nama Produk`, `Harga Produk`, `Penjual`, `Kota Toko`, `Banyaknya Terjual`, dan `Rating Produk`.
+   **Note:** For new products, there may be no information on the number of sales and product rating, resulting in different data counts for these columns. In such cases, fill missing values with `None`.
 
-3. Tokopedia memiliki skema promosi sehingga pada panel teratas merupakan info produk suatu merchant yang membayar iklan. Kita akan ambil produk di dalam box yang reguler dengan elemen `<div class="css-974ipl">`.
+4. Extract product information from at least 10 search result pages.
 
-  **Tambahan:** untuk produk baru, belum ada informasi berapa produk yang terjual dan rating sehingga hasil akhir akan berbeda jumlah data yang diperoleh untuk kolom `Banyaknya Terjual` dan `Rating Produk` seperti contoh gambar di bawah:
-
-  ![img](https://github.com/FTDS-learning-materials/phase-0/blob/main/img/p0gc3_2.png?raw=true)
-
-  Sehingga kamu perlu mengatasi hal ini dengan cara, jika menemukan bahwa tidak ada informasi `Banyaknya Terjual` dan `Rating Produk`, kamu hanya perlu mengisi data dengan `None` (tanpa string) dan pandas akan langsung mendeteksi sebagai missing value.
-
-4. Untuk memudahkan kamu, sudah disediakan list elemen salah satu produk:
-  ```html
-  <div class="prd_link-product-name css-3um8ox" data-testid="spnSRPProdName">SEBLAK JUARA INSTAN MASAK BASAH ASLI BANDUNG ENAK MANTAP</div>
-<div class="prd_link-product-price css-1ksb19c" data-testid="spnSRPProdPrice">Rp22.000</div>
-<div class="css-1rn0irl"><span class="prd_link-shop-loc css-1kdc32b flip" data-testid="spnSRPProdTabShopLoc">Bandung</span><span class="prd_link-shop-name css-1kdc32b flip" data-testid="">Rasa Juara Indonesia</span></div>
-<span class="prd_label-integrity css-1duhs3e" data-testid="">Terjual 750+</span>
-<span class="prd_rating-average-text css-t70v7i" data-testid="">4.9</span>
-  ```
-  **WARNING:** Kamu harus mengecek lagi kebenaran dari elemen tersebut karena Tokopedia merupakan website dinamis yang bisa saja berubah lagi attribute dan attribute value nya. Perlu diingat juga, Tokopedia senantiasa ingin melakukan improvisasi khususnya UI website sehingga bisa jadi sedang dilakukan A/B Testing dan kamu mendapatkan tampilan web yang berbeda. Tampilan web berbeda, maka elemennya juga berbeda.
-
-  Pastikan seluruh attribute dan values digunakan dalam positioning di Beautifulsoup nya.
-
-5. Ambil informasi produk minimal dari 10 halaman pencarian (perhatikan format url linknya dan eksplorasi terlebih dahulu halaman web nya).
-
-6. Perlu diingat bahwa setiap orang dan setiap waktu akan menghasilkan hasil data yang berbeda, hal ini tidak masalah, yang paling penting jumlah data yang diperoleh minimal 50 data dari minimal 10 halaman yang diakses.
-
-7. Simpan hasil scrape ke pandas data frame dan kemudian diolah. Kamu dibebaskan memberikan nama kolom yang memudahkan kamu.
+5. Save the scraped data into a Pandas DataFrame.
 
 #### B. Data Preparation
-
-1. Lakukan eksplorasi data sederhana:
-  - Tampilkan beberapa baris data - tuliskan insight
-  - Tampilkan informasi rangkuman data - tuliskan insight dan berikan penjelasan langkah apa yang akan kamu lakukan
-  - Cek missing value - tuliskan insight dari temuan yang kamu dapatkan
-2. Lakukan data cleaning:
-  Kamu bisa handle missing value bila ada, mengubah bentuk data menjadi konsisten dan menyesuaikan tipe data. Perlu diingat bahwa data ini akan digunakan untuk perhitungan statisik dan membutuhkan angka.
-3. Catatan:
-  Pada kolom "Banyaknya Terjual", jumlah produk yang terjual dituliskan sebagai `Terjual 750+`, `Terjual 1 rb`. Ambil angkanya saja. Misal `Terjual 750+` -> `750` dan `Terjual 1 rb` -> `1000`.
+1. Perform simple data exploration:
+   - Display a few rows of data and provide insights.
+   - Display a summary of the data and explain findings, including potential next steps.
+   - Check for missing values and provide insights from these findings.
+2. Perform data cleaning:
+   - Handle missing values, ensuring data consistency and appropriate data types for statistical calculations.
 
 #### C. Business Understanding/Problem Statement
-Buat problem statement menggunakan SMART framework berikut dengan penjabaran Specific, Measurable, Achievable, Relevant, dan Time-bound. Jangan lupa merangkup dalam satu kalimat problem statement serta gunakan metrik yang tepat dari kasus ini.
+Create a problem statement using the SMART framework, detailing the Specific, Measurable, Achievable, Relevant, and Time-bound aspects.
 
 #### D. Analysis
-  Dalam melakukan analisa data untuk mencapai tujuan yang diinginkan, kamu perlu mengikuti soal/pertanyaan/instruksi berikut ini:
-1. Hitung rata-rata, median, standar deviasi, skewness, dan kurtosis dari kolom harga, banyak produk terjual, dan rating. Dari hasil perhitungan, insight apa saja yang bisa kamu dapatkan khususnya terkait dengan produk seblak dan datanya (distribusi dan kecenderungan ada/tidaknya outlier)?
+The analysis will focus on the following:
 
-  **Note:** Jika menemukan adanya indikasi outlier dari perhitungan ini, tidak perlu dihandle karena sifatnya alami. Dibiarkan saja.
+1. Calculate the mean, median, standard deviation, skewness, and kurtosis for columns related to price, number of sales, and rating. Derive insights related to the distribution and potential outliers in seblak product data.
 
-2. Kamu memikirkan berapa potensi minimum dan maksimum pendapatan jika kamu menjual produk seblak?(Gunakan confidence interval untuk mendapatkan lower value dan upper value dari distribusi populasi pendapatan).
+2. Determine the minimum and maximum potential revenue from selling seblak products using confidence intervals (95% confidence level). Assume the data follows a normal distribution and the sales figures represent monthly sales.
 
-  Anggap data terdistribusi normal dan informasi produk terjual merupakan penjualan produk per bulan. Ambil confidence level 95%.
+3. Test whether there is a significant difference in product prices between the Greater Jakarta area (Jabodetabek) and other regions, considering potential differences in material costs. Formulate the null and alternative hypotheses and perform the appropriate hypothesis test.
 
-3. Apakah harga barang di Jabodetabek dan di luar Jabodetabek berbeda? mengingat biaya bahan baku di kedua lokasi berbeda. (Gunakan uji hipotesis yang diawali dengan menuliskan hipotesis null dan alternatifnya serta tentukan jenis hipotesis yang digunakan).
+4. Investigate if consumers prefer cheaper products by testing the correlation between price and product ratings. Analyze the correlation coefficient and p-value.
 
-4. Apakah orang lebih cenderung suka dengan produk yang harganya murah?
-
-  Kamu dapat jawab pertanyaan ini dengan uji korelasi. Gunakan library scipy jangan pandas. Analisis nilai korelasi dan p-value nya. Gunakan teknik yang sesuai dengan kondisi data!
-
-Kamu dilarang untuk copy-paste pertanyaan soal. Buat lah cerita yang runut dari persoalan dan jawaban nomor 1 sampai 4 sebagai ganti kalimat soal.
-
-#### E. Conclusion
-  Tuliskan di markdown kesimpulan dari hasil analisis dari nomor 1-4. Kesimpulan yang baik menjawab tujuan yang ingin dicapai. Kamu dibebaskan menuliskan dalam format paragraf atau poin.
-
-## Assignment Rubrics
-
-![img](https://github.com/FTDS-learning-materials/phase-0/blob/main/img/P0GC3_Rubric.png?raw=true)
-
----
-## Score Reduction
-
-Jika Student terlambat mengumpulkan dengan waktu yang ditentukan, maka Graded Challenge akan diberi poin nol.
-
----
+This README provides an overview of the project's objectives and requirements. The main goal is to extract, prepare, and analyze e-commerce data to derive business insights and make data-driven decisions.
