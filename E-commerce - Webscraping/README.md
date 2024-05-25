@@ -1,6 +1,6 @@
 ## E-commerce Project
 
-### Assignment Objectives
+### Overview
 
 This project aims to evaluate the concepts of Web Scraping, Business Knowledge, and Practical Statistics as follows:
 
