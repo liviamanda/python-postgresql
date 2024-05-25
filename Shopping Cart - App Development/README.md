@@ -1,6 +1,6 @@
-# Shopping Cart Project
+## Shopping Cart Project
 
-## Objectives
+### Objectives
 
 This project is designed to evaluate the concepts of Conditionals, Loops, Functions, Object-Oriented Programming, Python Unit Test, and Computational Thinking as follows:
 
@@ -11,7 +11,7 @@ This project is designed to evaluate the concepts of Conditionals, Loops, Functi
 - Test the code using `unittest`
 - Illustrate a flowchart
 
-## Assignment Instructions and Cases
+### Assignment Instructions and Cases
 
 **Case**
 
