@@ -1,6 +1,6 @@
 ## Finance Project
 
-### Objective
+### Overview
 
 This project aims to evaluate the concepts of Relational Databases and Pandas as follows:
 
@@ -11,6 +11,8 @@ This project aims to evaluate the concepts of Relational Databases and Pandas as
 - Ability to grant query access on the created database (DCL)
 - Ability to preprocess data with Pandas before transferring to the SQL database
 - Ability to retrieve data from the created database (DQL)
+
+---
 
 ### Assignment Instructions and Cases
 
