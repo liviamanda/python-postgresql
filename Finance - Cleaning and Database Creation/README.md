@@ -28,8 +28,6 @@ Currently, they manage and store their data using Microsoft Excel, saved in **.c
 
 ### 2. Data Cleaning
 Based on the exploration steps and findings, clean the data!
-
-**Hint:** The following steps might be useful (adjust based on the data exploration results):
 1. Manipulate columns, such as renaming, deleting, or adding columns.
 2. Change data types as needed. For instance, remove currency symbols to convert values to the appropriate data type.
 3. Check and handle missing values, possibly imputing them with zero if necessary.
