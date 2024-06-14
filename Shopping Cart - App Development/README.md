@@ -24,5 +24,3 @@ As a Python developer at a retail company, the task is to create a simple `shopp
 1. A flowchart illustrating the program flow
 2. Create a class named `ShoppingCart` to represent each user's shopping cart. This class should include methods to add items, remove items, calculate the total price, and run the user interface of the application. It should also contain an attribute `items`, which is a list of item objects in the shopping cart.
 3. Develop unit tests for the `ShoppingCart` class using `unittest`.
-
-This README provides an overview of the project's objectives and requirements. The main goal is to create a functional shopping cart program with a corresponding flowchart and thorough unit testing.
