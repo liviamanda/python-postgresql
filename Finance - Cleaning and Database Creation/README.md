@@ -60,5 +60,3 @@ After creating the tables, test the database and tables with the following cases
 
 1. Provide a table with the total profit per segmentation type, excluding non-discounted data.
 2. Provide a table summarizing the statistics (average, minimum, and maximum) of Sales for each country.
-
-This README provides an overview of the project's objectives and requirements. The main goal is to create a functional financial database, clean and normalize the data, and ensure proper database access and testing.
