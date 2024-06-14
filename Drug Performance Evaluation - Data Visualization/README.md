@@ -29,5 +29,3 @@ The goal of this project is to evaluate drug performance using statistical analy
 8. **Project Output**
    - A data visualization dashboard using `Tableau Public`.
    - Conducted analysis and data processing in a `jupyter notebook`.
-
-This README outlines the project goals, instructions, and tasks to provide a comprehensive evaluation of drug performance. The aim is to extract, prepare, analyze, and visualize data to generate actionable insights for the client.
