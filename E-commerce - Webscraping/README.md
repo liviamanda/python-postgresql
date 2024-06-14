@@ -58,5 +58,3 @@ The analysis will focus on the following:
 3. Test whether there is a significant difference in product prices between the Greater Jakarta area (Jabodetabek) and other regions, considering potential differences in material costs. Formulate the null and alternative hypotheses and perform the appropriate hypothesis test.
 
 4. Investigate if consumers prefer cheaper products by testing the correlation between price and product ratings. Analyze the correlation coefficient and p-value.
-
-This README provides an overview of the project's objectives and requirements. The main goal is to extract, prepare, and analyze e-commerce data to derive business insights and make data-driven decisions.
